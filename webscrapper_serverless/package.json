@@ -1,18 +1,16 @@
 {
   "name": "webscrapper_serverless",
   "version": "1.0.0",
+  "description": "",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "serverless deploy"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@serverless-chrome/lambda": "^1.0.0-57.2",
-    "puppeteer": "^19.7.5",
-    "superagent": "^8.0.9"
-  },
-  "description": ""
+    "@sparticuz/chromium": "^110.0.1",
+    "puppeteer-core": "19.6"
+  }
 }

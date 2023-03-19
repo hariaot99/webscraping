@@ -13,20 +13,17 @@
 
 service: webscrapper-serverless
 # app and org for use with dashboard.serverless.com
-app: webscrapper-serverless
-org: hariaot
+#app: your-app-name
+#org: your-org-name
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
 frameworkVersion: '3'
 
-package:
-  exclude:
-    - node_modules/puppeteer/.local-chromium/**
-
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
+  region: sa-east-1
 
 # you can overwrite defaults here
 #  stage: dev
@@ -65,6 +62,8 @@ provider:
 functions:
   hello:
     handler: handler.hello
+    memorySize: 512
+    timeout: 300
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
