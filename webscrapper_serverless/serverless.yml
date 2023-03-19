@@ -24,7 +24,6 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: sa-east-1
-
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
@@ -60,9 +59,9 @@ provider:
 #    - include-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
-    memorySize: 512
+  webscrapper:
+    handler: webscrapper.handle
+    memorySize: 2048
     timeout: 300
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
