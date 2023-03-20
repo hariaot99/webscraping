@@ -41,11 +41,11 @@ functions:
   webscrapper:
     handler: webscrapper.handle
     memorySize: 1024
-    timeout: 300
+    timeout: 30
     events:
       - http:
-          path: /test
-          method: post
+          path: /
+          method: get
           cors: true
           private: false
 
