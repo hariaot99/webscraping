@@ -13,6 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "@sparticuz/chromium": "^110.0.1",
-    "puppeteer-core": "19.6"
+    "aws-sdk": "^2.1338.0",
+    "bluebird": "^3.7.2",
+    "puppeteer-core": "19.6",
+    "uuid": "^9.0.0"
   }
 }

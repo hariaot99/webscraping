@@ -8,6 +8,34 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: sa-east-1
+  lambdaHashingVersion: 20201221
+
+  iam:
+    role:
+      statements:
+      - Effect: Allow
+        Action:
+         - "dynamodb:PutItem"
+         - "dynamodb:GetItem"
+         - "dynamodb:DeleteItem"
+         - "dynamodb:Scan"
+        Resource: "*" 
+
+resources:
+  Resources:
+    ProductsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ProductsTable
+        ProvisionedThroughput:
+          ReadCapacityUnits: 10
+          WriteCapacityUnits: 10
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
 
 functions:
   webscrapper:
@@ -17,6 +45,7 @@ functions:
     events:
       - http:
           path: /test
-          method: get
+          method: post
           cors: true
           private: false
+
