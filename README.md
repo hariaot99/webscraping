@@ -5,7 +5,10 @@ Utilizando a api Gateway é possível fazer chamadas a lambda function como uma 
 
 ### Tecnologias utilizadas
 - **Nodejs**
-- **Serverless framework**
+- **Serverless framework**  
+
+
+- **Teste**
 - **Puppeter** 
 - **AWS DynamoDB**
 - **AWS Lambda Functions**
